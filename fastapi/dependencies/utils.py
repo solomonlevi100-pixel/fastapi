@@ -1369,9 +1369,9 @@ def _get_body_field(
         body_param_media_types = [
             f.field_info.media_type
             for f in body_params
-            if isinstance(f.field_info, params.Body)
+            if isinstance(f.field_info, params.Body)   ######################################################
         ]
-        if len(set(body_param_media_types)) == 1:
+        if len(set(body_param_media_types)) == 1:      ######################################################
             BodyFieldInfo_kwargs["media_type"] = body_param_media_types[0]
     final_field = create_model_field(
         name="body",
